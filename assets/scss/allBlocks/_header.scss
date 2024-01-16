@@ -1,0 +1,101 @@
+@use "sass:map";
+
+$font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 'semibold': 600, 'bold': 700, 'extrabold': 800, 'black': 900);
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #202020;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 2.5rem;
+    padding-right: 4rem;
+    .logo-container{
+        display: flex;
+        align-items: center;
+        .logo{
+            display: flex;
+            align-items: center;
+            .logo-img{
+                position: relative;
+                height: 5rem;
+                width: 5rem;
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            #logo-txt{
+                text-transform: capitalize;
+                color: #fff;
+            }
+        }
+        
+    }
+    .search-container{
+        display: flex;
+        align-items: center;
+        flex: 0 1 68.5rem;
+        margin-left: 4rem;
+        form{
+            position: relative;
+            width: 62.5rem;
+            input{
+                height: 4rem;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                background-color: #121212;
+                border: .1rem solid rgba(255,255,255,.1);
+                padding: 1.2rem;
+                color: #fff;
+                font-size: 1rem;
+            }
+            
+        }
+        .search{
+            min-width: 6rem;
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 20;
+            background-color: #313131;
+            border: none;
+            outline: none;
+        }
+        .mic{
+            height: 4rem;
+            min-width: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 1rem;
+            border-radius: 50%;
+            border:none;
+            outline: none;
+            background-color: #181818;
+        }
+    }
+    .profile-container{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        .profile-box{
+            position: relative;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-left: 2.5rem;
+        }
+    }
+}
+    

@@ -1,0 +1,109 @@
+@use "sass:map";
+
+$font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 'semibold': 600, 'bold': 700, 'extrabold': 800, 'black': 900);
+
+.content{
+    width: calc(100vw - 240px);
+    .chips-wrapper{
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        justify-content: space-between;
+        gap: 1.2rem;
+        padding: 1.4rem 2.4rem;
+        border-top: .2rem solid #333;
+        border-bottom: .2rem solid #333;
+        background-color: #212121;
+        .chip{
+            background-color: #424242;
+            color: #fff;
+            border-radius: 1.6rem;
+            padding: .7rem 1.2rem;
+            p{
+                font-size: 1.4rem;
+                line-height: 16.4px;
+                font-weight: map-get($map: $font-weights, $key: regular);
+                text-transform: capitalize;
+            }
+        }
+        .chip:hover{
+            background-color: #4d4d4d;
+            cursor: pointer;
+        }
+    }
+    .chips-wrapper::-webkit-scrollbar{
+        height: 0;
+    }
+    .video-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1.8rem;
+        padding: 2rem 2.5rem;
+        background-color: #181818;
+        overflow-y: scroll;
+        height: calc(100vh - 116px);
+        .video-content-cover{
+            position: relative;
+            transition: .5s;
+            transition-delay: .05s;
+            background-color: #181818;
+            .video-content{
+                margin-bottom: 2.5rem;
+                transition: .5s;
+                background-color: #181818;
+                .video-box{
+                    position: absolute;
+                    width: auto;
+                    height: 14.5rem;
+                    video{
+                        width: 100%;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                }
+                .video-details{
+                    position: relative;
+                    display: flex;
+                    color: #fff;
+                    padding-top: 17rem;
+                    .detail{
+                        margin-left: 1.2rem;
+                        .title{
+                           font-size: 1.3rem;
+                        }
+                        .channel-name{
+                            font-size: 1.2rem;
+                            margin-top: 1rem;
+                            color: #909090;
+                        }
+                        .views-upload{
+                            display: flex;
+                            align-items: center;
+                            gap: .8rem;
+                            color: #909090;
+                        }
+                    }
+                    .channel-logo{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        object-fit: cover;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+                .hidden-content{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
